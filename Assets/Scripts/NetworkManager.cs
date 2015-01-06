@@ -2,10 +2,39 @@
 using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
-    string registeredGameName = "Test";
-    private void StartServer()
+    public GameObject obj;
+    string ip = "127.0.0.1";
+    string port = "25000";
+    bool connected = false;
+    private void CreatePlayer()
     {
-        Network.InitializeServer(32, 25000, false);
-        MasterServer.RegisterHost(registeredGameName,"Networking Turoial Game");
+        connected = true;
+        Network.Instantiate(obj, obj.transform.position, obj.transform.rotation, 1);
+  
+
     }
+    // サーバーに接続したとき呼ばれる
+    public void OnConnectedToServer()
+    {
+        CreatePlayer();
+        connected = true;
+    }
+    //　サーバー初期化するときに呼ばれる
+    public void OnServerInitialized()
+    {
+        CreatePlayer();
+    }
+
+    // ここらへんはボタンで呼んでる
+    public void InitServer()
+    {
+        if(!connected)
+        Network.InitializeServer(10, int.Parse(port), false);
+    }
+    public void ConnecteClient()
+    {
+        if(!connected)
+        Network.Connect(ip, int.Parse(port));
+    }
+
 }
