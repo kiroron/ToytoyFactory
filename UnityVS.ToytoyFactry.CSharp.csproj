@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CharacterMoveController.cs" />
+    <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\NetworkManager.cs" />
     <Compile Include="Assets\TestMoveManager.cs" />
     <Compile Include="Assets\TestRPCManager.cs" />
