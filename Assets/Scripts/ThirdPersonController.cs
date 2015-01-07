@@ -30,8 +30,7 @@ public class ThirdPersonController : MonoBehaviour {
 
 				rotationX %= 360; // 1回転=360度
 				rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-				
-				// カメラ関係（子供になってないとダメ）
+
 				// ポジション決め
 	
 				NormalCamera ();
@@ -43,9 +42,10 @@ public class ThirdPersonController : MonoBehaviour {
 	
 	
 	void NormalCamera(){
-				cameraPositionRe.z = Mathf.Cos (-rotationY * Mathf.PI / 180) * cameraPosition.z + Mathf.Cos(rotationX * Mathf.PI / 180);
-
-				cameraPositionRe.x = Mathf.Sin (rotationX * Mathf.PI / 180);
+        //2次元+2次元=3次元？
+				cameraPositionRe.z = Mathf.Cos (-rotationY * Mathf.PI / 180) + cameraPosition.z + Mathf.Cos(rotationX * Mathf.PI / 180);
+            
+				cameraPositionRe.x = Mathf.Sin (rotationX * Mathf.PI / 180) ;
 				cameraPositionRe.y = Mathf.Sin (-rotationY * Mathf.PI / 180);
 
 				playerCamera.transform.localEulerAngles = new Vector3 (-rotationY, -rotationX, 0);
