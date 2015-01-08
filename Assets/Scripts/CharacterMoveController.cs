@@ -12,12 +12,12 @@ public class CharacterMoveController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         controller = GetComponent<CharacterController>();
-        isis = networkView.isMine;
+		isis = networkView.isMine;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (networkView.isMine)
+				if (isis)
         {
             Vector2 moved = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             moved.Normalize();
