@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{FBB02D85-A7F0-8DB3-910F-F5E49F77053B}") = "ToytoyFactory", "Assembly-CSharp-firstpass-vs.csproj", "{2DD1A3CD-E0AB-0CF6-E50F-303A505CFEAA}"
+EndProject
 Project("{FBB02D85-A7F0-8DB3-910F-F5E49F77053B}") = "ToytoyFactory", "Assembly-CSharp-vs.csproj", "{6EC52648-ADBF-A89B-D125-5AEBCF3519E7}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DD1A3CD-E0AB-0CF6-E50F-303A505CFEAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD1A3CD-E0AB-0CF6-E50F-303A505CFEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD1A3CD-E0AB-0CF6-E50F-303A505CFEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD1A3CD-E0AB-0CF6-E50F-303A505CFEAA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6EC52648-ADBF-A89B-D125-5AEBCF3519E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6EC52648-ADBF-A89B-D125-5AEBCF3519E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EC52648-ADBF-A89B-D125-5AEBCF3519E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -17,7 +23,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																	GlobalSection(MonoDevelopProperties) = preSolution
+																															GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

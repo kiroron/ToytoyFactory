@@ -3,6 +3,7 @@ using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
     public GameObject obj;
+	public GameObject obj2;
     string ip = "127.0.0.1";
     string port = "25000";
     bool connected = false;
@@ -10,7 +11,7 @@ public class NetworkManager : MonoBehaviour {
     {
         connected = true;
         Network.Instantiate(obj, obj.transform.position, obj.transform.rotation, 1);
-  
+		Network.Instantiate(obj2, obj.transform.position, obj.transform.rotation, 1);
 
     }
     // サーバーに接続したとき呼ばれる
@@ -36,5 +37,6 @@ public class NetworkManager : MonoBehaviour {
         if(!connected)
         Network.Connect(ip, int.Parse(port));
     }
+
 
 }
